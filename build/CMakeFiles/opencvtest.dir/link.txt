@@ -1,0 +1,3 @@
+F:\VScode\cmake-4.1.0-rc2-windows-x86_64\cmake-4.1.0-rc2-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\opencvtest.dir/objects.a
+E:\QT5.12.8\Tools\mingw730_64\bin\ar.exe qc CMakeFiles\opencvtest.dir/objects.a @CMakeFiles\opencvtest.dir\objects1.rsp
+E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -Wl,--whole-archive CMakeFiles\opencvtest.dir/objects.a -Wl,--no-whole-archive -o opencvtest.exe -Wl,--out-implib,libopencvtest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\opencvtest.dir\linkLibs.rsp

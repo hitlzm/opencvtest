@@ -1,0 +1,4 @@
+E:/QTproject/opencvtest/build/CMakeFiles/opencvtest.dir
+E:/QTproject/opencvtest/build/CMakeFiles/edit_cache.dir
+E:/QTproject/opencvtest/build/CMakeFiles/rebuild_cache.dir
+E:/QTproject/opencvtest/build/CMakeFiles/opencvtest_autogen.dir

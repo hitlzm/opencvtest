@@ -1,0 +1,32 @@
+[
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\opencvtest_autogen\\mocs_compilation.cpp.obj -c E:\\QTproject\\opencvtest\\build\\opencvtest_autogen\\mocs_compilation.cpp",
+  "file": "E:/QTproject/opencvtest/build/opencvtest_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/opencvtest.dir/opencvtest_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\main.cpp.obj -c E:\\QTproject\\opencvtest\\main.cpp",
+  "file": "E:/QTproject/opencvtest/main.cpp",
+  "output": "CMakeFiles/opencvtest.dir/main.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\opencv\\objectdetector.cpp.obj -c E:\\QTproject\\opencvtest\\opencv\\objectdetector.cpp",
+  "file": "E:/QTproject/opencvtest/opencv/objectdetector.cpp",
+  "output": "CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\opencv\\videoprocessor.cpp.obj -c E:\\QTproject\\opencvtest\\opencv\\videoprocessor.cpp",
+  "file": "E:/QTproject/opencvtest/opencv/videoprocessor.cpp",
+  "output": "CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\opencvtest_autogen\\EWIEGA46WW\\qrc_qml.cpp.obj -c E:\\QTproject\\opencvtest\\build\\opencvtest_autogen\\EWIEGA46WW\\qrc_qml.cpp",
+  "file": "E:/QTproject/opencvtest/build/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp",
+  "output": "CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
+}
+]
