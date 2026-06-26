@@ -295,4 +295,27 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qset.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qcontiguouscache.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qsharedpointer.h \
- E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qsharedpointer_impl.h
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/QtConcurrentRun \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/qtconcurrentrun.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/qtconcurrentcompilertest.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/qtconcurrent_global.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/qtconcurrentrunbase.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qfuture.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qfutureinterface.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qrunnable.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qmutex.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qexception.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qresultstore.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qdebug.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qthreadpool.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qthread.h \
+ E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/future \
+ E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/thread \
+ E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/condition_variable \
+ E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_futex.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtConcurrent/qtconcurrentstoredfunctioncall.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/QFuture \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qfuture.h \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/QFutureWatcher \
+ E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qfuturewatcher.h

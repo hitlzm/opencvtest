@@ -3,7 +3,19 @@
 #include <opencv2/calib3d.hpp>
 #include <iostream>
 #include <QDebug>
+#include <QtConcurrent/QtConcurrentRun>   // 线程池支持
+#include <QFuture>                        // 异步结果
+#include <QFutureWatcher>                 // 可选，用于进度监控
 
+// ========== 辅助结构：单个模板的匹配结果 ==========
+struct TemplateMatchResult {
+    int templateIndex = -1;
+    int goodCount = 0;
+    std::vector<cv::Point2f> srcPts;
+    std::vector<cv::Point2f> dstPts;
+};
+
+// ========== 构造 / 析构 ==========
 ObjectDetector::ObjectDetector()
     : matchThreshold(0.6f)
     , ransacReprojThreshold(2.0f)
@@ -15,37 +27,25 @@ ObjectDetector::ObjectDetector()
 
 ObjectDetector::~ObjectDetector() {}
 
-void ObjectDetector::setMatchThreshold(float thresh)
-{
-    matchThreshold = thresh;
-}
-
-void ObjectDetector::setRansacThreshold(float thresh)
-{
-    ransacReprojThreshold = thresh;
-}
-
-void ObjectDetector::setOrbFeatures(int nFeatures)
-{
+// ========== 参数设置 ==========
+void ObjectDetector::setMatchThreshold(float thresh) { matchThreshold = thresh; }
+void ObjectDetector::setRansacThreshold(float thresh) { ransacReprojThreshold = thresh; }
+void ObjectDetector::setOrbFeatures(int nFeatures) {
     this->nFeatures = nFeatures;
     orb = cv::ORB::create(nFeatures);
 }
 
-// ── 模板管理 ──────────────────────────────────────────────
-
-bool ObjectDetector::addTemplate(const cv::Mat& templateImg, const std::string &name)
-{
+// ========== 模板管理 ==========
+bool ObjectDetector::addTemplate(const cv::Mat& templateImg, const std::string &name) {
     if (templateImg.empty()) {
         std::cerr << "[ObjectDetector] Template image is empty." << std::endl;
         return false;
     }
-
     TemplateData data;
     data.image = templateImg.clone();
     data.name = name;
     computeTemplateFeatures(data);
     data.templateReady = !data.descriptors.empty();
-
     if (data.templateReady) {
         m_templates.push_back(data);
         qDebug() << "[ObjectDetector] Template" << m_templates.size()
@@ -55,34 +55,19 @@ bool ObjectDetector::addTemplate(const cv::Mat& templateImg, const std::string &
     return data.templateReady;
 }
 
-// bool ObjectDetector::addTemplates(const std::vector<cv::Mat>& images)
-// {
-//     bool anyOk = false;
-//     for (size_t i = 0; i < images.size(); ++i) {
-//         std::string name = "template_" + std::to_string(i);
-//         if (addTemplate(images[i], name))
-//             anyOk = true;
-//     }
-//     return anyOk;
-// }
-
-void ObjectDetector::computeTemplateFeatures(TemplateData &tpl)
-{
+void ObjectDetector::computeTemplateFeatures(TemplateData &tpl) {
     cv::Mat gray;
     if (tpl.image.channels() == 3)
         cv::cvtColor(tpl.image, gray, cv::COLOR_BGR2GRAY);
     else
         gray = tpl.image.clone();
-
     orb->detectAndCompute(gray, cv::noArray(), tpl.keypoints, tpl.descriptors);
     if (tpl.descriptors.empty())
         std::cerr << "[ObjectDetector] No features found in template." << std::endl;
 }
 
-// ── 检测（多模板） ────────────────────────────────────────
-
-bool ObjectDetector::detect(const cv::Mat& frame, cv::Rect& bbox)
-{
+// ========== 检测入口 ==========
+bool ObjectDetector::detect(const cv::Mat& frame, cv::Rect& bbox) {
     if (m_templates.empty()) {
         std::cerr << "[ObjectDetector] No templates loaded." << std::endl;
         return false;
@@ -91,15 +76,15 @@ bool ObjectDetector::detect(const cv::Mat& frame, cv::Rect& bbox)
         std::cerr << "[ObjectDetector] Frame is empty." << std::endl;
         return false;
     }
-
     std::vector<cv::Point2f> dummy;
     return findObject(frame, bbox, dummy);
 }
 
+// ========== 核心检测（线程池并行版本） ==========
 bool ObjectDetector::findObject(const cv::Mat& frame, cv::Rect& bbox,
                                 std::vector<cv::Point2f>& /*matchedPoints*/)
 {
-    // ── 1. 帧转灰度 + 提取特征（只做一次） ──
+    // ----- 1. 帧特征提取（单线程，只做一次） -----
     cv::Mat grayFrame;
     if (frame.channels() == 3)
         cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
@@ -113,63 +98,77 @@ bool ObjectDetector::findObject(const cv::Mat& frame, cv::Rect& bbox,
     if (frameDescriptors.empty())
         return false;
 
-    // ── 2. 遍历所有模板，仅用 Lowe's ratio test 筛选最佳 ──
-    int bestIndex = -1;
-    int bestGoodMatches = 0;
-    // 暂存最佳模板的匹配点对（只存最优的，避免每个模板都算）
-    std::vector<cv::Point2f> bestSrcPts, bestDstPts;
+    // ----- 2. 并行处理所有模板的匹配（线程池） -----
+    // 每个模板的匹配任务独立，互不干扰，可并行
+    QList<QFuture<TemplateMatchResult>> futures;
+    futures.reserve(m_templates.size());
 
-    for (size_t t = 0; t < m_templates.size(); ++t) {
+    for (int t = 0; t < (int)m_templates.size(); ++t) {
         const TemplateData &tpl = m_templates[t];
         if (!tpl.templateReady || tpl.descriptors.empty())
             continue;
 
-        // 2a. knn 匹配（k=2）
-        std::vector<std::vector<cv::DMatch>> knnMatches;
-        matcher->knnMatch(tpl.descriptors, frameDescriptors, knnMatches, 2);
+        // 提交任务给 Qt 全局线程池
+        QFuture<TemplateMatchResult> future = QtConcurrent::run(
+            // lambda 捕获必要的参数（值传递或const引用）
+            [this, &tpl, &frameDescriptors, &frameKeypoints, t]() -> TemplateMatchResult {
+                TemplateMatchResult result;
+                result.templateIndex = t;
 
-        // 2b. Lowe's ratio test 筛选
-        std::vector<cv::DMatch> goodMatches;
-        goodMatches.reserve(knnMatches.size());
-        for (size_t i = 0; i < knnMatches.size(); ++i) {
-            if (knnMatches[i].size() >= 2) {
-                float dist1 = knnMatches[i][0].distance;
-                float dist2 = knnMatches[i][1].distance;
-                if (dist1 < matchThreshold * dist2)
-                    goodMatches.push_back(knnMatches[i][0]);
+                // 2a. knn 匹配 (k=2)
+                std::vector<std::vector<cv::DMatch>> knnMatches;
+                matcher->knnMatch(tpl.descriptors, frameDescriptors, knnMatches, 2);
+
+                // 2b. Lowe's ratio test
+                std::vector<cv::DMatch> goodMatches;
+                goodMatches.reserve(knnMatches.size());
+                for (const auto& km : knnMatches) {
+                    if (km.size() >= 2) {
+                        float dist1 = km[0].distance;
+                        float dist2 = km[1].distance;
+                        if (dist1 < matchThreshold * dist2)
+                            goodMatches.push_back(km[0]);
+                    }
+                }
+
+                // 2c. 如果足够，收集点对
+                if (goodMatches.size() >= 4) {
+                    result.goodCount = (int)goodMatches.size();
+                    result.srcPts.reserve(goodMatches.size());
+                    result.dstPts.reserve(goodMatches.size());
+                    for (const auto& m : goodMatches) {
+                        result.srcPts.push_back(tpl.keypoints[m.queryIdx].pt);
+                        result.dstPts.push_back(frameKeypoints[m.trainIdx].pt);
+                    }
+                }
+                return result;
             }
-        }
+        );
+        futures.append(future);
+    }
 
-        // goodMatches 数量不够，跳过
-        if (goodMatches.size() < 4)
-            continue;
-
-        // 比当前最优更好？更新记录 + 暂存匹配点对
-        if ((int)goodMatches.size() > bestGoodMatches) {
-            bestGoodMatches = (int)goodMatches.size();
-            bestIndex = (int)t;
-
-            // 暂存匹配点对（仅此模板，避免后面重复计算）
-            bestSrcPts.clear(); bestSrcPts.reserve(goodMatches.size());
-            bestDstPts.clear(); bestDstPts.reserve(goodMatches.size());
-            for (const auto& m : goodMatches) {
-                bestSrcPts.push_back(tpl.keypoints[m.queryIdx].pt);
-                bestDstPts.push_back(frameKeypoints[m.trainIdx].pt);
-            }
+    // ----- 3. 收集所有结果，选出最佳模板 -----
+    TemplateMatchResult best;
+    for (auto& f : futures) {
+        TemplateMatchResult res = f.result();   // 阻塞等待该任务完成
+        if (res.goodCount > best.goodCount) {
+            best = std::move(res);
         }
     }
 
-    // ── 3. 没有模板通过 Lowe's test ──
-    if (bestIndex < 0)
+    // 没有足够匹配的模板
+    if (best.templateIndex < 0 || best.goodCount < 4)
         return false;
 
-    // ── 4. 只对最佳模板做一次 RANSAC 单应性计算 ──
-    cv::Mat H = cv::findHomography(bestSrcPts, bestDstPts, cv::RANSAC, ransacReprojThreshold,cv::noArray(), 2000, 0.995);
+    // ----- 4. 仅对最佳模板执行 RANSAC 单应性（主线程串行）-----
+    cv::Mat H = cv::findHomography(best.srcPts, best.dstPts,
+                                   cv::RANSAC, ransacReprojThreshold,
+                                   cv::noArray(), 2000, 0.995);
     if (H.empty())
         return false;
 
-    // ── 5. 用最佳模板 + 单应性矩阵计算边界框 ──
-    const TemplateData &bestTpl = m_templates[bestIndex];
+    // ----- 5. 用最佳模板计算边界框 -----
+    const TemplateData &bestTpl = m_templates[best.templateIndex];
     std::vector<cv::Point2f> tplCorners = {
         cv::Point2f(0, 0),
         cv::Point2f(bestTpl.image.cols - 1, 0),
@@ -180,6 +179,7 @@ bool ObjectDetector::findObject(const cv::Mat& frame, cv::Rect& bbox,
     cv::perspectiveTransform(tplCorners, sceneCorners, H);
 
     bbox = cv::boundingRect(sceneCorners);
+    // 裁剪到帧范围
     if (bbox.x < 0) bbox.x = 0;
     if (bbox.y < 0) bbox.y = 0;
     if (bbox.x + bbox.width > frame.cols)
