@@ -4,22 +4,26 @@
 #include <opencv2/core.hpp>
 #include <opencv2/features2d.hpp>
 #include <vector>
+#include <string>
 #include <QObject>
 /**
- * @brief 基于 ORB 特征匹配的目标检测器
- * 
- * 使用模板图像在视频帧中搜索相似目标，返回其矩形边界框。
- * 内部采用 ORB 特征提取 + BFMatcher (汉明距离) + Lowe's ratio test
- * + RANSAC 单应性矩阵求取目标位置。
+ * @brief 基于 ORB 特征匹配的目标检测器（多模板支持）
+ *
+ * 可加载多个模板图像（正面、侧面等），在视频帧中分别
+ * 匹配每个模板，最终选用匹配度（goodMatches 数量）最高
+ * 的模板来计算目标矩形边界框。
+ *
+ * 内部采用 ORB 特征提取 + BFMatcher (汉明距离) +
+ * Lowe's ratio test + RANSAC 单应性矩阵求取目标位置。
  */
-// void processVideo();
-//多模板改造，使用多个模板进行特征点匹配
-// struct TemplateData {
-//     cv::Mat image;
-//     std::vector<cv::KeyPoint> keypoints;
-//     cv::Mat descriptors;
-//     std::string name; // 可选：用于调试输出（如 "正面", "侧面"）
-// };
+
+struct TemplateData {
+    cv::Mat image;                          // 模板图像
+    std::vector<cv::KeyPoint> keypoints;    // 特征点
+    cv::Mat descriptors;                    // 特征描述子
+    bool templateReady = false;
+    std::string name;                       // 可选：调试用（如 "front", "side"）
+};
 
 class ObjectDetector : public QObject
 {
@@ -29,17 +33,22 @@ public:
     ~ObjectDetector();
 
     /**
-     * @brief 设置模板图像（必须调用此方法后方可进行检测）
-     * @param templateImg 模板图像（彩色或灰度均可，内部会自动转灰度）
+     * @brief 添加一个模板图像（可多次调用，加载多个模板）
+     * @param templateImg 模板图像（彩色或灰度均可）
      * @return true 成功提取特征，false 图像为空或无特征点
      */
-    bool setTemplate(const cv::Mat& templateImg);
+    bool addTemplate(const cv::Mat& templateImg, const std::string &name = "");
 
     /**
-     * @brief 在单帧图像中检测目标
-     * @param frame 输入帧（彩色或灰度）
-     * @param bbox 输出目标矩形框（若检测失败则为空矩形）
-     * @return true 检测到目标，false 未检测到
+     * @brief 便捷：一次性加载多个模板
+     */
+    // bool addTemplates(const std::vector<cv::Mat>& images);
+
+    /**
+     * @brief 在单帧图像中检测目标（遍历所有模板，选匹配度最高的）
+     * @param frame 输入帧
+     * @param bbox 输出目标矩形框
+     * @return true 检测到目标
      */
     bool detect(const cv::Mat& frame, cv::Rect& bbox);
 
@@ -48,24 +57,19 @@ public:
     void setRansacThreshold(float thresh);          // 默认 3.0 (重投影误差)
     void setOrbFeatures(int nFeatures);             // 默认 1000
 
-    // 调试用：获取模板特征点与描述子
-    void getTemplateFeatures(std::vector<cv::KeyPoint>& keypoints,
-                             cv::Mat& descriptors) const;
- 
+    /// 已加载的模板数量
+    int templateCount() const { return (int)m_templates.size(); }
+
 private:
-    // std::vector<TemplateData> m_templates;
-    cv::Mat templateImg;                // 模板图像（彩色）
-    std::vector<cv::KeyPoint> tplKeypoints;  //模板特征点
-    cv::Mat tplDescriptors;              //特征描述子
-    cv::Ptr<cv::ORB> orb;               //特征提取类
-    cv::Ptr<cv::BFMatcher> matcher;     //匹配类
+    std::vector<TemplateData> m_templates;
+    cv::Ptr<cv::ORB> orb;
+    cv::Ptr<cv::BFMatcher> matcher;
 
     float matchThreshold;               // Lowe's ratio 阈值
     float ransacReprojThreshold;        // RANSAC 重投影误差阈值
     int nFeatures;                      // ORB 特征点数量
-    bool templateReady;
 
-    void computeTemplateFeatures();
+    void computeTemplateFeatures(TemplateData &tpl);
     bool findObject(const cv::Mat& frame, cv::Rect& bbox,
                     std::vector<cv::Point2f>& matchedPoints);
 };

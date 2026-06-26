@@ -281,9 +281,6 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/opencv-4.2.0/mingw2/install/include/opencv2/calib3d.hpp \
  E:/opencv-4.2.0/mingw2/install/include/opencv2/core/affine.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/videoio.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/highgui.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/imgcodecs.hpp \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/QDebug \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qdebug.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qhash.h \

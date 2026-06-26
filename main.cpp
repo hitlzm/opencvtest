@@ -25,13 +25,33 @@ int main(int argc, char *argv[])
     QThread *videoThread = new QThread;
     VideoProcessor *processor = new VideoProcessor;
 
-    if (!processor->init("E:\\tank.mp4", "E:\\tank.png")) {
-        std::cerr << "[main] VideoProcessor init FAILED" << std::endl;
+    // 打开视频（只需一次）
+    if (!processor->openVideo("E:\\tank.mp4")) {
+        std::cerr << "[main] openVideo FAILED" << std::endl;
         delete processor;
         delete videoThread;
         return -1;
     }
 
+    // 加载多个模板（正面、侧面等），匹配度最高的获胜
+    // processor->addTemplateFile("E:\\tank.png", "tank_front");
+    processor->addTemplateFile("E:\\tank2.png", "tank_side");  // 示例：第二个模板
+    processor->addTemplateFile("E:\\tank3.png", "tank_side");
+    processor->addTemplateFile("E:\\tank4.png", "tank_side");
+    processor->addTemplateFile("E:\\tank5.png", "tank_side");
+    processor->addTemplateFile("E:\\tank6.png", "tank_side");
+    processor->addTemplateFile("E:\\tank7.png", "tank_side");
+    processor->addTemplateFile("E:\\tank8.png", "tank_side");
+    if (processor->templateCount() == 0) {
+        std::cerr << "[main] No templates loaded" << std::endl;
+        delete processor;
+        delete videoThread;
+        return -1;
+    }
+
+    processor->setMatchThreshold(0.7f);
+    processor->setRansacThreshold(4.0f);
+    //重复加载多个图片模板
     processor->moveToThread(videoThread);
 
     // 工作线程每帧 → 主线程: ① 更新 ImageProvider  ② 触发 QML 刷新

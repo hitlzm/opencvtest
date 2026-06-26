@@ -16,11 +16,22 @@ public:
     explicit VideoProcessor(QObject *parent = nullptr);
     ~VideoProcessor();
 
-    /// 加载模板图片并打开视频文件
+    /// 加载视频文件（只调用一次）
+    bool openVideo(const QString &videoPath);
+
+    /// 添加一个模板图片（可多次调用，加载多个模板）
+    bool addTemplateFile(const QString &path, const std::string &name = "");
+
+    /// 便捷：打开视频 + 加载一个模板
     bool init(const QString &videoPath, const QString &templatePath);
 
     /// 设置目标帧率（默认 30）
     void setTargetFps(int fps);
+
+    /// ObjectDetector 参数转发
+    void setMatchThreshold(float t)   { m_detector.setMatchThreshold(t); }
+    void setRansacThreshold(float t)  { m_detector.setRansacThreshold(t); }
+    int  templateCount() const        { return m_detector.templateCount(); }
 
 public slots:
     void start();         // 开始逐帧处理
