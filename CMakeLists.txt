@@ -11,7 +11,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(OpenCV_DIR "E:/opencv-4.2.0/mingw2/install")
+set(OpenCV_DIR "E:/opencv-4.2.0/DNN/install")
 # set(OPENCV_BIN_DIR "${OPENCV_DIR}/bin")
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check http://doc.qt.io/qt-5/deployment-android.html for more information.
@@ -49,6 +49,8 @@ else()
       opencv/cvconvert.h
       opencvimage/imageprovider.h
       opencvimage/framesource.h
+      DNN/dnnvideoprocessor.cpp
+      DNN/yolodetector.cpp
       qml.qrc
     )
 endif()
@@ -63,9 +65,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     ${OpenCV_INCLUDE_DIRS}  # OpenCV的头文件路径
 )
 
-# add_custom_command(TARGET opencvtest POST_BUILD
-#     COMMAND ${CMAKE_COMMAND} -E copy_directory
-#         "${OPENCV_BIN_DIR}"
-#         "$<TARGET_FILE_DIR:opencvtest>"
-#     COMMENT "Copying OpenCV DLLs from ${OPENCV_BIN_DIR}"
-# )
+add_custom_command(TARGET opencvtest POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${OPENCV_BIN_DIR}"
+        "$<TARGET_FILE_DIR:opencvtest>"
+    COMMENT "Copying OpenCV DLLs from ${OPENCV_BIN_DIR}"
+)

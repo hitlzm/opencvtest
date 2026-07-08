@@ -139,11 +139,41 @@ CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.s"
 	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\opencv\videoprocessor.cpp -o CMakeFiles\opencvtest.dir\opencv\videoprocessor.cpp.s
 
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj: E:/QTproject/opencvtest/DNN/dnnvideoprocessor.cpp
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj -MF CMakeFiles\opencvtest.dir\DNN\dnnvideoprocessor.cpp.obj.d -o CMakeFiles\opencvtest.dir\DNN\dnnvideoprocessor.cpp.obj -c E:\QTproject\opencvtest\DNN\dnnvideoprocessor.cpp
+
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\DNN\dnnvideoprocessor.cpp > CMakeFiles\opencvtest.dir\DNN\dnnvideoprocessor.cpp.i
+
+CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\DNN\dnnvideoprocessor.cpp -o CMakeFiles\opencvtest.dir\DNN\dnnvideoprocessor.cpp.s
+
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj: E:/QTproject/opencvtest/DNN/yolodetector.cpp
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj -MF CMakeFiles\opencvtest.dir\DNN\yolodetector.cpp.obj.d -o CMakeFiles\opencvtest.dir\DNN\yolodetector.cpp.obj -c E:\QTproject\opencvtest\DNN\yolodetector.cpp
+
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\DNN\yolodetector.cpp > CMakeFiles\opencvtest.dir\DNN\yolodetector.cpp.i
+
+CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\DNN\yolodetector.cpp -o CMakeFiles\opencvtest.dir\DNN\yolodetector.cpp.s
+
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
 	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj -MF CMakeFiles\opencvtest.dir\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp.obj.d -o CMakeFiles\opencvtest.dir\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp.obj -c E:\QTproject\opencvtest\build\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp
 
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.i: cmake_force
@@ -160,6 +190,8 @@ opencvtest_OBJECTS = \
 "CMakeFiles/opencvtest.dir/main.cpp.obj" \
 "CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj" \
 "CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.obj" \
+"CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj" \
+"CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj" \
 "CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
 
 # External object files for target opencvtest
@@ -169,32 +201,66 @@ opencvtest.exe: CMakeFiles/opencvtest.dir/opencvtest_autogen/mocs_compilation.cp
 opencvtest.exe: CMakeFiles/opencvtest.dir/main.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/build.make
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Quickd.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_gapi420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_highgui420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_ml420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_objdetect420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_photo420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_stitching420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_video420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_videoio420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_gapi420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_stitching420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_aruco420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_bgsegm420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_bioinspired420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_ccalib420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_cvv420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_dnn_objdetect420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_dnn_superres420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_dpm420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_face420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_fuzzy420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_img_hash420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_line_descriptor420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_quality420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_reg420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_saliency420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_shape420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_stereo420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_structured_light420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_superres420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_tracking420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_videostab420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_xobjdetect420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_xphoto420.dll.a
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Qmld.a
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Networkd.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_imgcodecs420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_highgui420.dll.a
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Guid.a
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Cored.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_calib3d420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_features2d420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_flann420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_imgproc420.dll.a
-opencvtest.exe: E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/libopencv_core420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_datasets420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_plot420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_text420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_dnn420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_ml420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_phase_unwrapping420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_optflow420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_ximgproc420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_video420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_videoio420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_imgcodecs420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_objdetect420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_calib3d420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_features2d420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_flann420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_photo420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_imgproc420.dll.a
+opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_core420.dll.a
 opencvtest.exe: CMakeFiles/opencvtest.dir/linkLibs.rsp
 opencvtest.exe: CMakeFiles/opencvtest.dir/objects1.rsp
 opencvtest.exe: CMakeFiles/opencvtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable opencvtest.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable opencvtest.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencvtest.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying OpenCV DLLs from E:/opencv-4.2.0/DNN/install/x64/mingw/bin"
+	F:\VScode\cmake-4.1.0-rc2-windows-x86_64\cmake-4.1.0-rc2-windows-x86_64\bin\cmake.exe -E copy_directory E:/opencv-4.2.0/DNN/install/x64/mingw/bin E:/QTproject/opencvtest/build
 
 # Rule to build all files generated by this target.
 CMakeFiles/opencvtest.dir/build: opencvtest.exe

@@ -1271,7 +1271,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[E:/opencv-4.2.0/mingw2/install][v4.2.0()]"
+			"value" : "[E:/opencv-4.2.0/DNN/install][v4.2.0()]"
 		},
 		{
 			"name" : "OpenCV_DIR",

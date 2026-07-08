@@ -1,8 +1,8 @@
 CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:\QTproject\opencvtest\opencv\objectdetector.cpp \
  E:\QTproject\opencvtest\opencv\ObjectDetector.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cvdef.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cvdef.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/limits.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed/syslimits.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/limits.h \
@@ -13,7 +13,7 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/vadefs.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_directx.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/hal/interface.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/hal/interface.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstddef \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -23,7 +23,7 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstdint \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/stdint.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/stdint.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cv_cpu_dispatch.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cv_cpu_dispatch.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/emmintrin.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/xmmintrin.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mmintrin.h \
@@ -117,9 +117,9 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cerrno \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/functional_hash.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_string.tcc \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/version.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/base.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/opencv_modules.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/version.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/base.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/opencv_modules.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/climits \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h \
@@ -129,13 +129,13 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_construct.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cvstd.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cvstd.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstring \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/string.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/sec_api/string_s.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/math.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cvstd_wrapper.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cvstd_wrapper.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/memory \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_uninitialized.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_raw_storage_iter.h \
@@ -153,15 +153,15 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_base.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/atomic_lockfree_defines.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward/auto_ptr.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/neon_utils.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/vsx_utils.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/neon_utils.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/vsx_utils.hpp \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/assert.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/check.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/traits.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/matx.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/saturate.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/fast_math.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/types.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/check.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/traits.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/matx.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/saturate.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/fast_math.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/types.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cfloat \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/float.h \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/float.h \
@@ -169,12 +169,12 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_bvector.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/vector.tcc \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/mat.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/bufferpool.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/mat.inl.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/persistence.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/operations.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cvstd.inl.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/mat.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/bufferpool.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/mat.inl.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/persistence.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/operations.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cvstd.inl.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/complex \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/istream \
@@ -199,7 +199,7 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/ostream.tcc \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/istream.tcc \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/utility.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/utility.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/functional \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/std_function.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/mutex \
@@ -211,13 +211,13 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/x86_64-w64-mingw32/include/pthread_time.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/parse_numbers.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/std_mutex.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/optim.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/ovx.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/cvdef.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/features2d.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/flann/miniflann.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/flann/defines.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/flann/config.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/optim.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/ovx.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/cvdef.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/features2d.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/flann/miniflann.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/flann/defines.h \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/flann/config.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/QObject \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qobject.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qobjectdefs.h \
@@ -277,9 +277,9 @@ CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj: \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_map.h \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_multimap.h \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qobject_impl.h \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/imgproc.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/calib3d.hpp \
- E:/opencv-4.2.0/mingw2/install/include/opencv2/core/affine.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/imgproc.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/calib3d.hpp \
+ E:/opencv-4.2.0/DNN/install/include/opencv2/core/affine.hpp \
  E:/QT5.12.8/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iostream \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/QDebug \
  E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore/qdebug.h \

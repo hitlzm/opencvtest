@@ -25,6 +25,18 @@
 },
 {
   "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\DNN\\dnnvideoprocessor.cpp.obj -c E:\\QTproject\\opencvtest\\DNN\\dnnvideoprocessor.cpp",
+  "file": "E:/QTproject/opencvtest/DNN/dnnvideoprocessor.cpp",
+  "output": "CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
+  "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\DNN\\yolodetector.cpp.obj -c E:\\QTproject\\opencvtest\\DNN\\yolodetector.cpp",
+  "file": "E:/QTproject/opencvtest/DNN/yolodetector.cpp",
+  "output": "CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj"
+},
+{
+  "directory": "E:/QTproject/opencvtest/build",
   "command": "E:\\QT5.12.8\\Tools\\mingw730_64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_QML_DEBUG -DQT_QML_LIB -DQT_QUICK_LIB @CMakeFiles/opencvtest.dir/includes_CXX.rsp -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11 -o CMakeFiles\\opencvtest.dir\\opencvtest_autogen\\EWIEGA46WW\\qrc_qml.cpp.obj -c E:\\QTproject\\opencvtest\\build\\opencvtest_autogen\\EWIEGA46WW\\qrc_qml.cpp",
   "file": "E:/QTproject/opencvtest/build/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp",
   "output": "CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"

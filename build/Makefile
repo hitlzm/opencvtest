@@ -141,6 +141,54 @@ opencvtest_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest_autogen.dir\build.make CMakeFiles/opencvtest_autogen.dir/build
 .PHONY : opencvtest_autogen/fast
 
+DNN/dnnvideoprocessor.obj: DNN/dnnvideoprocessor.cpp.obj
+.PHONY : DNN/dnnvideoprocessor.obj
+
+# target to build an object file
+DNN/dnnvideoprocessor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj
+.PHONY : DNN/dnnvideoprocessor.cpp.obj
+
+DNN/dnnvideoprocessor.i: DNN/dnnvideoprocessor.cpp.i
+.PHONY : DNN/dnnvideoprocessor.i
+
+# target to preprocess a source file
+DNN/dnnvideoprocessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.i
+.PHONY : DNN/dnnvideoprocessor.cpp.i
+
+DNN/dnnvideoprocessor.s: DNN/dnnvideoprocessor.cpp.s
+.PHONY : DNN/dnnvideoprocessor.s
+
+# target to generate assembly for a file
+DNN/dnnvideoprocessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.s
+.PHONY : DNN/dnnvideoprocessor.cpp.s
+
+DNN/yolodetector.obj: DNN/yolodetector.cpp.obj
+.PHONY : DNN/yolodetector.obj
+
+# target to build an object file
+DNN/yolodetector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj
+.PHONY : DNN/yolodetector.cpp.obj
+
+DNN/yolodetector.i: DNN/yolodetector.cpp.i
+.PHONY : DNN/yolodetector.i
+
+# target to preprocess a source file
+DNN/yolodetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.i
+.PHONY : DNN/yolodetector.cpp.i
+
+DNN/yolodetector.s: DNN/yolodetector.cpp.s
+.PHONY : DNN/yolodetector.s
+
+# target to generate assembly for a file
+DNN/yolodetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s
+.PHONY : DNN/yolodetector.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -271,6 +319,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... opencvtest_autogen
 	@echo ... opencvtest
+	@echo ... DNN/dnnvideoprocessor.obj
+	@echo ... DNN/dnnvideoprocessor.i
+	@echo ... DNN/dnnvideoprocessor.s
+	@echo ... DNN/yolodetector.obj
+	@echo ... DNN/yolodetector.i
+	@echo ... DNN/yolodetector.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

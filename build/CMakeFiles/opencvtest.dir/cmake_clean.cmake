@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj"
+  "CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj.d"
+  "CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj"
+  "CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj.d"
   "CMakeFiles/opencvtest.dir/main.cpp.obj"
   "CMakeFiles/opencvtest.dir/main.cpp.obj.d"
   "CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj"
