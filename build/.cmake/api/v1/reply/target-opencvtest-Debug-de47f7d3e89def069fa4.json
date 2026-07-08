@@ -43,7 +43,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 58,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
@@ -103,13 +103,13 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 56,
+				"line" : 58,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 62,
+				"line" : 64,
 				"parent" : 0
 			}
 		]
@@ -165,7 +165,7 @@
 				{
 					"backtrace" : 14,
 					"isSystem" : true,
-					"path" : "E:/opencv-4.2.0/mingw2/install/include"
+					"path" : "E:/opencv-4.2.0/DNN/install/include"
 				},
 				{
 					"backtrace" : 2,
@@ -223,7 +223,9 @@
 				1,
 				2,
 				3,
-				9
+				8,
+				9,
+				11
 			]
 		}
 	],
@@ -250,42 +252,127 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_gapi420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_gapi420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_highgui420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_stitching420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_ml420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_aruco420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_objdetect420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_bgsegm420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_photo420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_bioinspired420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_stitching420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ccalib420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_video420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_cvv420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_videoio420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn_objdetect420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn_superres420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dpm420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_face420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_fuzzy420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_img_hash420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_line_descriptor420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_quality420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_reg420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_saliency420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_shape420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_stereo420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_structured_light420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_superres420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_tracking420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_videostab420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_xobjdetect420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_xphoto420.dll.a",
 				"role" : "libraries"
 			},
 			{
@@ -300,7 +387,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_imgcodecs420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_highgui420.dll.a",
 				"role" : "libraries"
 			},
 			{
@@ -315,27 +402,92 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_calib3d420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_datasets420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_features2d420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_plot420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_flann420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_text420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_imgproc420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn420.dll.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "E:\\opencv-4.2.0\\mingw2\\install\\x64\\mingw\\lib\\libopencv_core420.dll.a",
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ml420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_phase_unwrapping420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_optflow420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ximgproc420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_video420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_videoio420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_imgcodecs420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_objdetect420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_calib3d420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_features2d420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_flann420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_photo420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_imgproc420.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_core420.dll.a",
 				"role" : "libraries"
 			},
 			{
@@ -362,7 +514,9 @@
 				1,
 				2,
 				3,
-				9
+				8,
+				9,
+				11
 			]
 		},
 		{
@@ -379,14 +533,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				8
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				10
+				12
 			]
 		}
 	],
@@ -436,6 +590,18 @@
 			"backtrace" : 1,
 			"path" : "opencvimage/framesource.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DNN/dnnvideoprocessor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DNN/yolodetector.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

@@ -81,13 +81,13 @@
 		"E:/QT5.12.8/5.12.8/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
 		"E:/QT5.12.8/5.12.8/mingw73_64/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake",
 		"E:/QT5.12.8/5.12.8/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
-		"E:/opencv-4.2.0/mingw2/install/OpenCVConfig-version.cmake",
-		"E:/opencv-4.2.0/mingw2/install/OpenCVConfig.cmake",
-		"E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/OpenCVConfig.cmake",
+		"E:/opencv-4.2.0/DNN/install/OpenCVConfig-version.cmake",
+		"E:/opencv-4.2.0/DNN/install/OpenCVConfig.cmake",
+		"E:/opencv-4.2.0/DNN/install/x64/mingw/lib/OpenCVConfig.cmake",
 		"F:/VScode/cmake-4.1.0-rc2-windows-x86_64/cmake-4.1.0-rc2-windows-x86_64/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake",
 		"F:/VScode/cmake-4.1.0-rc2-windows-x86_64/cmake-4.1.0-rc2-windows-x86_64/share/cmake-4.1/Modules/FindPackageMessage.cmake",
-		"E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/OpenCVModules.cmake",
-		"E:/opencv-4.2.0/mingw2/install/x64/mingw/lib/OpenCVModules-release.cmake",
+		"E:/opencv-4.2.0/DNN/install/x64/mingw/lib/OpenCVModules.cmake",
+		"E:/opencv-4.2.0/DNN/install/x64/mingw/lib/OpenCVModules-release.cmake",
 		"E:/QTproject/opencvtest/qml.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "E:/QTproject/opencvtest",
@@ -96,6 +96,18 @@
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
+		[
+			"E:/QTproject/opencvtest/DNN/dnnvideoprocessor.h",
+			"MU",
+			"VWC7DU4CCO/moc_dnnvideoprocessor.cpp",
+			null
+		],
+		[
+			"E:/QTproject/opencvtest/DNN/yolodetector.h",
+			"MU",
+			"VWC7DU4CCO/moc_yolodetector.cpp",
+			null
+		],
 		[
 			"E:/QTproject/opencvtest/opencv/cvconvert.h",
 			"MU",
@@ -150,7 +162,7 @@
 	[
 		"E:/QTproject/opencvtest/build",
 		"E:/QTproject/opencvtest",
-		"E:/opencv-4.2.0/mingw2/install/include",
+		"E:/opencv-4.2.0/DNN/install/include",
 		"E:/QT5.12.8/5.12.8/mingw73_64/include",
 		"E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore",
 		"E:/QT5.12.8/5.12.8/mingw73_64/mkspecs/win32-g++",
@@ -191,6 +203,8 @@
 	"SETTINGS_FILE" : "E:/QTproject/opencvtest/build/CMakeFiles/opencvtest_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "E:/QTproject/opencvtest/DNN/dnnvideoprocessor.cpp", "MU", null ],
+		[ "E:/QTproject/opencvtest/DNN/yolodetector.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/main.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/opencv/objectdetector.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/opencv/videoprocessor.cpp", "MU", null ]
