@@ -24,7 +24,11 @@ void VideoProcessor::setTargetFps(int fps)
 
 bool VideoProcessor::openVideo(const QString &videoPath)
 {
-    m_capture.open(videoPath.toLocal8Bit().constData());
+    // 强制 FFmpeg 软件解码，避免 OMX/DXVA2/VAAPI 等硬件解码器兼容性问题
+    // 注意：OpenCV 4.5+ 可用 set(CAP_PROP_HW_ACCELERATION, VIDEO_ACCELERATION_NONE)
+    //       此处用环境变量禁用 FFmpeg 硬解（兼容 OpenCV 4.2）
+    qputenv("OPENCV_FFMPEG_CAPTURE_OPTIONS", "hwaccel=none");
+    m_capture.open(videoPath.toLocal8Bit().constData(), cv::CAP_FFMPEG);
     if (!m_capture.isOpened()) {
         emit error("Cannot open video: " + videoPath);
         return false;

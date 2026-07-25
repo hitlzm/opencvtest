@@ -165,6 +165,54 @@ DNN/dnnvideoprocessor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.s
 .PHONY : DNN/dnnvideoprocessor.cpp.s
 
+DNN/onnxdetector.obj: DNN/onnxdetector.cpp.obj
+.PHONY : DNN/onnxdetector.obj
+
+# target to build an object file
+DNN/onnxdetector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj
+.PHONY : DNN/onnxdetector.cpp.obj
+
+DNN/onnxdetector.i: DNN/onnxdetector.cpp.i
+.PHONY : DNN/onnxdetector.i
+
+# target to preprocess a source file
+DNN/onnxdetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.i
+.PHONY : DNN/onnxdetector.cpp.i
+
+DNN/onnxdetector.s: DNN/onnxdetector.cpp.s
+.PHONY : DNN/onnxdetector.s
+
+# target to generate assembly for a file
+DNN/onnxdetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.s
+.PHONY : DNN/onnxdetector.cpp.s
+
+DNN/onnxvideoprocessor.obj: DNN/onnxvideoprocessor.cpp.obj
+.PHONY : DNN/onnxvideoprocessor.obj
+
+# target to build an object file
+DNN/onnxvideoprocessor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj
+.PHONY : DNN/onnxvideoprocessor.cpp.obj
+
+DNN/onnxvideoprocessor.i: DNN/onnxvideoprocessor.cpp.i
+.PHONY : DNN/onnxvideoprocessor.i
+
+# target to preprocess a source file
+DNN/onnxvideoprocessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.i
+.PHONY : DNN/onnxvideoprocessor.cpp.i
+
+DNN/onnxvideoprocessor.s: DNN/onnxvideoprocessor.cpp.s
+.PHONY : DNN/onnxvideoprocessor.s
+
+# target to generate assembly for a file
+DNN/onnxvideoprocessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.s
+.PHONY : DNN/onnxvideoprocessor.cpp.s
+
 DNN/yolodetector.obj: DNN/yolodetector.cpp.obj
 .PHONY : DNN/yolodetector.obj
 
@@ -188,6 +236,54 @@ DNN/yolodetector.s: DNN/yolodetector.cpp.s
 DNN/yolodetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s
 .PHONY : DNN/yolodetector.cpp.s
+
+ONNXRUNTIME/onnxyolodetector.obj: ONNXRUNTIME/onnxyolodetector.cpp.obj
+.PHONY : ONNXRUNTIME/onnxyolodetector.obj
+
+# target to build an object file
+ONNXRUNTIME/onnxyolodetector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj
+.PHONY : ONNXRUNTIME/onnxyolodetector.cpp.obj
+
+ONNXRUNTIME/onnxyolodetector.i: ONNXRUNTIME/onnxyolodetector.cpp.i
+.PHONY : ONNXRUNTIME/onnxyolodetector.i
+
+# target to preprocess a source file
+ONNXRUNTIME/onnxyolodetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.i
+.PHONY : ONNXRUNTIME/onnxyolodetector.cpp.i
+
+ONNXRUNTIME/onnxyolodetector.s: ONNXRUNTIME/onnxyolodetector.cpp.s
+.PHONY : ONNXRUNTIME/onnxyolodetector.s
+
+# target to generate assembly for a file
+ONNXRUNTIME/onnxyolodetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.s
+.PHONY : ONNXRUNTIME/onnxyolodetector.cpp.s
+
+ONNXRUNTIME/streamprocessor.obj: ONNXRUNTIME/streamprocessor.cpp.obj
+.PHONY : ONNXRUNTIME/streamprocessor.obj
+
+# target to build an object file
+ONNXRUNTIME/streamprocessor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj
+.PHONY : ONNXRUNTIME/streamprocessor.cpp.obj
+
+ONNXRUNTIME/streamprocessor.i: ONNXRUNTIME/streamprocessor.cpp.i
+.PHONY : ONNXRUNTIME/streamprocessor.i
+
+# target to preprocess a source file
+ONNXRUNTIME/streamprocessor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.i
+.PHONY : ONNXRUNTIME/streamprocessor.cpp.i
+
+ONNXRUNTIME/streamprocessor.s: ONNXRUNTIME/streamprocessor.cpp.s
+.PHONY : ONNXRUNTIME/streamprocessor.s
+
+# target to generate assembly for a file
+ONNXRUNTIME/streamprocessor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\opencvtest.dir\build.make CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.s
+.PHONY : ONNXRUNTIME/streamprocessor.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -322,9 +418,21 @@ help:
 	@echo ... DNN/dnnvideoprocessor.obj
 	@echo ... DNN/dnnvideoprocessor.i
 	@echo ... DNN/dnnvideoprocessor.s
+	@echo ... DNN/onnxdetector.obj
+	@echo ... DNN/onnxdetector.i
+	@echo ... DNN/onnxdetector.s
+	@echo ... DNN/onnxvideoprocessor.obj
+	@echo ... DNN/onnxvideoprocessor.i
+	@echo ... DNN/onnxvideoprocessor.s
 	@echo ... DNN/yolodetector.obj
 	@echo ... DNN/yolodetector.i
 	@echo ... DNN/yolodetector.s
+	@echo ... ONNXRUNTIME/onnxyolodetector.obj
+	@echo ... ONNXRUNTIME/onnxyolodetector.i
+	@echo ... ONNXRUNTIME/onnxyolodetector.s
+	@echo ... ONNXRUNTIME/streamprocessor.obj
+	@echo ... ONNXRUNTIME/streamprocessor.i
+	@echo ... ONNXRUNTIME/streamprocessor.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

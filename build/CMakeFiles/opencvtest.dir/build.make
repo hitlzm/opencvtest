@@ -169,11 +169,71 @@ CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.s"
 	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\DNN\yolodetector.cpp -o CMakeFiles\opencvtest.dir\DNN\yolodetector.cpp.s
 
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj: E:/QTproject/opencvtest/DNN/onnxdetector.cpp
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj -MF CMakeFiles\opencvtest.dir\DNN\onnxdetector.cpp.obj.d -o CMakeFiles\opencvtest.dir\DNN\onnxdetector.cpp.obj -c E:\QTproject\opencvtest\DNN\onnxdetector.cpp
+
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\DNN\onnxdetector.cpp > CMakeFiles\opencvtest.dir\DNN\onnxdetector.cpp.i
+
+CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\DNN\onnxdetector.cpp -o CMakeFiles\opencvtest.dir\DNN\onnxdetector.cpp.s
+
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj: E:/QTproject/opencvtest/DNN/onnxvideoprocessor.cpp
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj -MF CMakeFiles\opencvtest.dir\DNN\onnxvideoprocessor.cpp.obj.d -o CMakeFiles\opencvtest.dir\DNN\onnxvideoprocessor.cpp.obj -c E:\QTproject\opencvtest\DNN\onnxvideoprocessor.cpp
+
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\DNN\onnxvideoprocessor.cpp > CMakeFiles\opencvtest.dir\DNN\onnxvideoprocessor.cpp.i
+
+CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\DNN\onnxvideoprocessor.cpp -o CMakeFiles\opencvtest.dir\DNN\onnxvideoprocessor.cpp.s
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj: E:/QTproject/opencvtest/ONNXRUNTIME/onnxyolodetector.cpp
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj -MF CMakeFiles\opencvtest.dir\ONNXRUNTIME\onnxyolodetector.cpp.obj.d -o CMakeFiles\opencvtest.dir\ONNXRUNTIME\onnxyolodetector.cpp.obj -c E:\QTproject\opencvtest\ONNXRUNTIME\onnxyolodetector.cpp
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\ONNXRUNTIME\onnxyolodetector.cpp > CMakeFiles\opencvtest.dir\ONNXRUNTIME\onnxyolodetector.cpp.i
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\ONNXRUNTIME\onnxyolodetector.cpp -o CMakeFiles\opencvtest.dir\ONNXRUNTIME\onnxyolodetector.cpp.s
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj: E:/QTproject/opencvtest/ONNXRUNTIME/streamprocessor.cpp
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj -MF CMakeFiles\opencvtest.dir\ONNXRUNTIME\streamprocessor.cpp.obj.d -o CMakeFiles\opencvtest.dir\ONNXRUNTIME\streamprocessor.cpp.obj -c E:\QTproject\opencvtest\ONNXRUNTIME\streamprocessor.cpp
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.i"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\QTproject\opencvtest\ONNXRUNTIME\streamprocessor.cpp > CMakeFiles\opencvtest.dir\ONNXRUNTIME\streamprocessor.cpp.i
+
+CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.s"
+	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\QTproject\opencvtest\ONNXRUNTIME\streamprocessor.cpp -o CMakeFiles\opencvtest.dir\ONNXRUNTIME\streamprocessor.cpp.s
+
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/flags.make
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/includes_CXX.rsp
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj: CMakeFiles/opencvtest.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
 	E:\QT5.12.8\Tools\mingw730_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj -MF CMakeFiles\opencvtest.dir\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp.obj.d -o CMakeFiles\opencvtest.dir\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp.obj -c E:\QTproject\opencvtest\build\opencvtest_autogen\EWIEGA46WW\qrc_qml.cpp
 
 CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.i: cmake_force
@@ -192,6 +252,10 @@ opencvtest_OBJECTS = \
 "CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.obj" \
 "CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj" \
 "CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj" \
+"CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj" \
+"CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj" \
+"CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj" \
+"CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj" \
 "CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj"
 
 # External object files for target opencvtest
@@ -203,6 +267,10 @@ opencvtest.exe: CMakeFiles/opencvtest.dir/opencv/objectdetector.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/opencv/videoprocessor.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/dnnvideoprocessor.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/yolodetector.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/onnxdetector.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/DNN/onnxvideoprocessor.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/ONNXRUNTIME/onnxyolodetector.cpp.obj
+opencvtest.exe: CMakeFiles/opencvtest.dir/ONNXRUNTIME/streamprocessor.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/opencvtest_autogen/EWIEGA46WW/qrc_qml.cpp.obj
 opencvtest.exe: CMakeFiles/opencvtest.dir/build.make
 opencvtest.exe: E:/QT5.12.8/5.12.8/mingw73_64/lib/libQt5Quickd.a
@@ -257,7 +325,7 @@ opencvtest.exe: E:/opencv-4.2.0/DNN/install/x64/mingw/lib/libopencv_core420.dll.
 opencvtest.exe: CMakeFiles/opencvtest.dir/linkLibs.rsp
 opencvtest.exe: CMakeFiles/opencvtest.dir/objects1.rsp
 opencvtest.exe: CMakeFiles/opencvtest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable opencvtest.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\QTproject\opencvtest\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable opencvtest.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\opencvtest.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying OpenCV DLLs from E:/opencv-4.2.0/DNN/install/x64/mingw/bin"
 	F:\VScode\cmake-4.1.0-rc2-windows-x86_64\cmake-4.1.0-rc2-windows-x86_64\bin\cmake.exe -E copy_directory E:/opencv-4.2.0/DNN/install/x64/mingw/bin E:/QTproject/opencvtest/build

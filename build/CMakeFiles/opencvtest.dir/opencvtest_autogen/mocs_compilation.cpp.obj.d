@@ -313,6 +313,11 @@ CMakeFiles/opencvtest.dir/opencvtest_autogen/mocs_compilation.cpp.obj: \
  E:/opencv-4.2.0/DNN/install/include/opencv2/dnn/dnn.inl.hpp \
  E:/opencv-4.2.0/DNN/install/include/opencv2/dnn/utils/inference_engine.hpp \
  E:/opencv-4.2.0/DNN/install/include/opencv2/dnn/dnn.hpp \
+ E:\QTproject\opencvtest\build\opencvtest_autogen\VWC7DU4CCO/moc_onnxdetector.cpp \
+ E:/QTproject/opencvtest/DNN/onnxdetector.h \
+ E:\QTproject\opencvtest\build\opencvtest_autogen\VWC7DU4CCO/moc_onnxvideoprocessor.cpp \
+ E:/QTproject/opencvtest/DNN/onnxvideoprocessor.h \
+ E:/QTproject/opencvtest/DNN/onnxdetector.h \
  E:\QTproject\opencvtest\build\opencvtest_autogen\VWC7DU4CCO/moc_yolodetector.cpp \
  E:/QTproject/opencvtest/DNN/yolodetector.h \
  E:\QTproject\opencvtest\build\opencvtest_autogen\IBQRWEGK53/moc_objectdetector.cpp \

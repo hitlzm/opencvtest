@@ -1,5 +1,6 @@
 #include "yolodetector.h"
 #include <opencv2/imgproc.hpp>
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <QDebug>
@@ -147,9 +148,31 @@ void YoloDetector::postProcess(const cv::Mat &frame,
     std::vector<float>  confidences;
     std::vector<cv::Rect> boxes;
 
-    // ── 遍历所有输出层（3 个尺度） ──
+    // ── blobFromImage 变换参数（每帧固定，预计算一次）──
+    //   blobFromImage(crop=false) 等比缩放 + letterboxing：
+    //     scale = min(inputW/frameW, inputH/frameH)
+    //     图像有效区域: [padX, padX+frameW*scale] × [padY, padY+frameH*scale]
+    float blobScale = std::min(float(m_inputWidth)  / float(frameW),
+                               float(m_inputHeight) / float(frameH));
+    float padX = (float(m_inputWidth)  - float(frameW) * blobScale) / 2.0f;
+    float padY = (float(m_inputHeight) - float(frameH) * blobScale) / 2.0f;
+
+    // ── 调试：每 100 帧打印一次变换参数 ──
+    {
+        static int paramCount = 0;
+        if (paramCount == 0) {
+            qDebug() << "[YoloDetector] blobFromImage transform:"
+                     << "blobScale=" << blobScale
+                     << "padX=" << padX << "padY=" << padY
+                     << "| input:" << m_inputWidth << "x" << m_inputHeight
+                     << "frame:" << frameW << "x" << frameH;
+            paramCount++;
+        }
+    }
+
+    // ── 遍历所有输出层（2 个尺度） ──
     for (const auto &output : outputs) {
-        // YOLOv4 输出 shape: [N, 5 + numClasses]
+        // YOLOv3-tiny 输出 shape: [N, 5 + numClasses]
         //   每行: [center_x, center_y, width, height, objectness, class_0, ...]
         const float *data = (const float *)output.data;
 
@@ -167,17 +190,37 @@ void YoloDetector::postProcess(const cv::Mat &frame,
             if (finalConf < m_confThreshold)
                 continue;
 
-            // YOLO 输出坐标（相对于 0~1）
+            // YOLO 输出坐标（OpenCV 已归一化到 [0, 1]，相对于 blob 尺寸）
             float cx = data[0];
             float cy = data[1];
             float w  = data[2];
             float h  = data[3];
 
-            // 映射回原始图像尺寸
-            int left   = int((cx - w * 0.5f) * frameW);
-            int top    = int((cy - h * 0.5f) * frameH);
-            int width  = int(w * frameW);
-            int height = int(h * frameH);
+            // ── 调试：打印前 5 个高置信度检测的原始坐标 ──
+            {
+                static int debugCount = 0;
+                if (debugCount < 5 && finalConf > 0.5f) {
+                    qDebug() << "[YoloDetector] Raw coords:"
+                             << "cx=" << cx << "cy=" << cy
+                             << "w=" << w << "h=" << h
+                             << "| conf:" << finalConf;
+                    debugCount++;
+                }
+            }
+
+            // 映射回原始图像坐标（剔除 letterboxing padding 并等比缩放）
+            //   blobFromImage(crop=false) 把图像等比缩放居中填入正方 blob，
+            //   所以归一化坐标中包含了 padding。需要先转到 blob 像素空间，
+            //   减去 padding，再除以缩放因子恢复到原始分辨率。
+            float cx_blob = cx * float(m_inputWidth);
+            float cy_blob = cy * float(m_inputHeight);
+            float w_blob  = w  * float(m_inputWidth);
+            float h_blob  = h  * float(m_inputHeight);
+
+            int left   = int((cx_blob - padX - w_blob * 0.5f) / blobScale);
+            int top    = int((cy_blob - padY - h_blob * 0.5f) / blobScale);
+            int width  = int(w_blob / blobScale);
+            int height = int(h_blob / blobScale);
 
             classIds.push_back(classIdPoint.x);
             confidences.push_back(finalConf);

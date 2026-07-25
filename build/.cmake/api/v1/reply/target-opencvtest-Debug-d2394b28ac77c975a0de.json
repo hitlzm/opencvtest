@@ -14,6 +14,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"target_link_directories",
 			"target_link_libraries",
 			"set_target_properties",
 			"_populate_Quick_target_properties",
@@ -37,79 +38,91 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 44,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 60,
+				"line" : 106,
 				"parent" : 0
 			},
 			{
-				"command" : 4,
+				"command" : 2,
+				"file" : 0,
+				"line" : 86,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 107,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
 				"file" : 0,
 				"line" : 29,
 				"parent" : 0
 			},
 			{
 				"file" : 2,
-				"parent" : 3
-			},
-			{
-				"command" : 4,
-				"file" : 2,
-				"line" : 28,
-				"parent" : 4
-			},
-			{
-				"file" : 1,
 				"parent" : 5
 			},
 			{
-				"command" : 3,
-				"file" : 1,
-				"line" : 160,
+				"command" : 5,
+				"file" : 2,
+				"line" : 28,
 				"parent" : 6
 			},
 			{
-				"command" : 2,
 				"file" : 1,
-				"line" : 32,
 				"parent" : 7
 			},
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 95,
-				"parent" : 6
+				"line" : 160,
+				"parent" : 8
 			},
 			{
-				"file" : 3,
+				"command" : 3,
+				"file" : 1,
+				"line" : 32,
 				"parent" : 9
 			},
 			{
 				"command" : 5,
-				"file" : 3,
-				"line" : 160,
-				"parent" : 10
+				"file" : 1,
+				"line" : 95,
+				"parent" : 8
 			},
 			{
-				"command" : 2,
 				"file" : 3,
-				"line" : 32,
 				"parent" : 11
 			},
 			{
 				"command" : 6,
-				"file" : 0,
-				"line" : 58,
-				"parent" : 0
+				"file" : 3,
+				"line" : 160,
+				"parent" : 12
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 32,
+				"parent" : 13
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 64,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 92,
 				"parent" : 0
 			}
 		]
@@ -120,33 +133,33 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++11"
+					"fragment" : "-DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++14"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"define" : "QT_CORE_LIB"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"define" : "QT_GUI_LIB"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"define" : "QT_NETWORK_LIB"
 				},
 				{
-					"backtrace" : 13,
+					"backtrace" : 15,
 					"define" : "QT_QML_DEBUG"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"define" : "QT_QML_LIB"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"define" : "QT_QUICK_LIB"
 				}
 			],
@@ -163,47 +176,51 @@
 					"path" : "E:/QTproject/opencvtest/build/opencvtest_autogen/include"
 				},
 				{
-					"backtrace" : 14,
+					"backtrace" : 16,
+					"path" : "E:/onnxruntime/include"
+				},
+				{
+					"backtrace" : 16,
 					"isSystem" : true,
 					"path" : "E:/opencv-4.2.0/DNN/install/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/./mkspecs/win32-g++"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtQuick"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtQml"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtNetwork"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtGui"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "E:/QT5.12.8/5.12.8/mingw73_64/include/QtANGLE"
 				}
@@ -213,9 +230,9 @@
 			{
 				"backtraces" : 
 				[
-					2
+					3
 				],
-				"standard" : "11"
+				"standard" : "14"
 			},
 			"sourceIndexes" : 
 			[
@@ -225,7 +242,11 @@
 				3,
 				8,
 				9,
-				11
+				10,
+				11,
+				12,
+				13,
+				16
 			]
 		}
 	],
@@ -247,246 +268,256 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "-LE:\\onnxruntime\\build\\Windows\\Release",
+				"role" : "libraryPath"
+			},
+			{
+				"backtrace" : 3,
 				"fragment" : "E:\\QT5.12.8\\5.12.8\\mingw73_64\\lib\\libQt5Quickd.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_gapi420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_stitching420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_aruco420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_bgsegm420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_bioinspired420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ccalib420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_cvv420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn_objdetect420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn_superres420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dpm420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_face420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_fuzzy420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_img_hash420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_line_descriptor420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_quality420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_reg420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_saliency420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_shape420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_stereo420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_structured_light420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_superres420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_tracking420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_videostab420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_xobjdetect420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_xphoto420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 8,
+				"backtrace" : 4,
+				"fragment" : "-lonnxruntime",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 10,
 				"fragment" : "E:\\QT5.12.8\\5.12.8\\mingw73_64\\lib\\libQt5Qmld.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 12,
+				"backtrace" : 14,
 				"fragment" : "E:\\QT5.12.8\\5.12.8\\mingw73_64\\lib\\libQt5Networkd.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_highgui420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 8,
+				"backtrace" : 10,
 				"fragment" : "E:\\QT5.12.8\\5.12.8\\mingw73_64\\lib\\libQt5Guid.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\QT5.12.8\\5.12.8\\mingw73_64\\lib\\libQt5Cored.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_datasets420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_plot420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_text420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_dnn420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ml420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_phase_unwrapping420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_optflow420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_ximgproc420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_video420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_videoio420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_imgcodecs420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_objdetect420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_calib3d420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_features2d420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_flann420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_photo420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_imgproc420.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 2,
+				"backtrace" : 3,
 				"fragment" : "E:\\opencv-4.2.0\\DNN\\install\\x64\\mingw\\lib\\libopencv_core420.dll.a",
 				"role" : "libraries"
 			},
@@ -516,7 +547,11 @@
 				3,
 				8,
 				9,
-				11
+				10,
+				11,
+				12,
+				13,
+				16
 			]
 		},
 		{
@@ -526,21 +561,22 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				14
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				10
+				15
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				12
+				17
 			]
 		}
 	],
@@ -602,6 +638,35 @@
 			"compileGroupIndex" : 0,
 			"path" : "DNN/yolodetector.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DNN/onnxdetector.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "DNN/onnxvideoprocessor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ONNXRUNTIME/onnxyolodetector.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ONNXRUNTIME/streamprocessor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ONNXRUNTIME/streamprocessor.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,

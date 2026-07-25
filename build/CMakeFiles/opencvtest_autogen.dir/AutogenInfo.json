@@ -103,9 +103,33 @@
 			null
 		],
 		[
+			"E:/QTproject/opencvtest/DNN/onnxdetector.h",
+			"MU",
+			"VWC7DU4CCO/moc_onnxdetector.cpp",
+			null
+		],
+		[
+			"E:/QTproject/opencvtest/DNN/onnxvideoprocessor.h",
+			"MU",
+			"VWC7DU4CCO/moc_onnxvideoprocessor.cpp",
+			null
+		],
+		[
 			"E:/QTproject/opencvtest/DNN/yolodetector.h",
 			"MU",
 			"VWC7DU4CCO/moc_yolodetector.cpp",
+			null
+		],
+		[
+			"E:/QTproject/opencvtest/ONNXRUNTIME/onnxyolodetector.h",
+			"MU",
+			"YLVBLPH7SA/moc_onnxyolodetector.cpp",
+			null
+		],
+		[
+			"E:/QTproject/opencvtest/ONNXRUNTIME/streamprocessor.h",
+			"MU",
+			"YLVBLPH7SA/moc_streamprocessor.cpp",
 			null
 		],
 		[
@@ -162,6 +186,7 @@
 	[
 		"E:/QTproject/opencvtest/build",
 		"E:/QTproject/opencvtest",
+		"E:/onnxruntime/include",
 		"E:/opencv-4.2.0/DNN/install/include",
 		"E:/QT5.12.8/5.12.8/mingw73_64/include",
 		"E:/QT5.12.8/5.12.8/mingw73_64/include/QtCore",
@@ -184,7 +209,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"E:/QT5.12.8/Tools/mingw730_64/bin/g++.exe",
-		"-std=gnu++11",
+		"-std=gnu++14",
 		"-w",
 		"-dM",
 		"-E",
@@ -204,7 +229,15 @@
 	"SOURCES" : 
 	[
 		[ "E:/QTproject/opencvtest/DNN/dnnvideoprocessor.cpp", "MU", null ],
+		[ "E:/QTproject/opencvtest/DNN/onnxdetector.cpp", "MU", null ],
+		[ "E:/QTproject/opencvtest/DNN/onnxvideoprocessor.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/DNN/yolodetector.cpp", "MU", null ],
+		[
+			"E:/QTproject/opencvtest/ONNXRUNTIME/onnxyolodetector.cpp",
+			"MU",
+			null
+		],
+		[ "E:/QTproject/opencvtest/ONNXRUNTIME/streamprocessor.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/main.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/opencv/objectdetector.cpp", "MU", null ],
 		[ "E:/QTproject/opencvtest/opencv/videoprocessor.cpp", "MU", null ]

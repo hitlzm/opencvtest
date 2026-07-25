@@ -3,9 +3,12 @@
 #include <QQmlContext>
 #include <QThread>
 #include <iostream>
-#include "opencv/videoprocessor.h"
+#include "ONNXRUNTIME/streamprocessor.h"
 #include "opencvimage/imageprovider.h"
 #include "opencvimage/framesource.h"
+
+// ONNX Runtime 方案（StreamProcessor + OnnxYoloDetector）
+// 使用 ONNX Runtime 推理引擎加载 .onnx 模型进行目标检测
 
 int main(int argc, char *argv[])
 {
@@ -19,57 +22,56 @@ int main(int argc, char *argv[])
 
     // ── 2. FrameSource（QML 属性绑定，替代 Timer 刷新） ──
     FrameSource *frameSource = new FrameSource();
-    
 
-    // ── 3. 视频处理器（工作线程） ──
+    // ── 3. ONNX Runtime 视频处理器（工作线程） ──
     QThread *videoThread = new QThread;
-    VideoProcessor *processor = new VideoProcessor;
+    StreamProcessor *processor = new StreamProcessor;
 
-    // 打开视频（只需一次）
-    if (!processor->openVideo("E:\\tank.mp4")) {
+    // 打开本地视频文件
+    if (!processor->openVideo("E:\\baizhuangjia2.mp4")) {
         std::cerr << "[main] openVideo FAILED" << std::endl;
         delete processor;
         delete videoThread;
         return -1;
     }
 
-    // 加载多个模板（正面、侧面等），匹配度最高的获胜
-    // processor->addTemplateFile("E:\\tank.png", "tank_front");
-    processor->addTemplateFile("E:\\tank2.png", "tank_side");  // 示例：第二个模板
-    processor->addTemplateFile("E:\\tank3.png", "tank_side");
-    processor->addTemplateFile("E:\\tank4.png", "tank_side");
-    processor->addTemplateFile("E:\\tank5.png", "tank_side");
-    processor->addTemplateFile("E:\\tank6.png", "tank_side");
-    processor->addTemplateFile("E:\\tank7.png", "tank_side");
-    processor->addTemplateFile("E:\\tank8.png", "tank_side");
-    if (processor->templateCount() == 0) {
-        std::cerr << "[main] No templates loaded" << std::endl;
+    // 加载 ONNX Runtime YOLO 模型 + 类别名称
+    if (!processor->loadYoloModel("E:\\QTproject\\yolov3model2\\best.onnx",
+                                   "E:\\QTproject\\yolov4model\\test.names")) {
+        std::cerr << "[main] loadYoloModel FAILED" << std::endl;
         delete processor;
         delete videoThread;
         return -1;
     }
 
-    processor->setMatchThreshold(0.7f);
-    processor->setRansacThreshold(4.0f);
-    //重复加载多个图片模板
+    // 调节 ONNX Runtime 推理参数
+    processor->setConfThreshold(0.4f);
+    processor->setNmsThreshold(0.5f);
+    processor->setInputSize(416, 416);
+    processor->setTargetFps(30);
+
+    // 可选：开启图像增强处理
+    // processor->setAutoEnhance(true);
+    // processor->setDenoise(true);
+
     processor->moveToThread(videoThread);
 
     // 工作线程每帧 → 主线程: ① 更新 ImageProvider  ② 触发 QML 刷新
-    QObject::connect(processor, &VideoProcessor::frameReady, qApp,
+    QObject::connect(processor, &StreamProcessor::frameReady, qApp,
                      [provider, frameSource](const QImage &img) {
         provider->updateImage(img);
         frameSource->refresh();         // QML 属性绑定自动触发 requestImage
     });
 
-    QObject::connect(processor, &VideoProcessor::error,
+    QObject::connect(processor, &StreamProcessor::errorOccurred,
                      [](const QString &msg) {
-        std::cerr << "[VideoProcessor] " << msg.toStdString() << std::endl;
+        std::cerr << "[StreamProcessor] " << msg.toStdString() << std::endl;
     });
 
     QObject::connect(videoThread, &QThread::started,
-                     processor, &VideoProcessor::start);
+                     processor, &StreamProcessor::start);
 
-    QObject::connect(processor, &VideoProcessor::finished,
+    QObject::connect(processor, &StreamProcessor::finished,
                      videoThread, &QThread::quit);
 
     QObject::connect(videoThread, &QThread::finished,
@@ -111,3 +113,42 @@ int main(int argc, char *argv[])
     std::cout << "[main] Step 4: Entering event loop" << std::endl;
     return app.exec();
 }
+
+
+// ===================================================================
+// 备选方案，保留参考
+// ===================================================================
+//
+// ── Darknet YOLOv3-tiny 方案（DnnVideoProcessor + OpenCV DNN） ──
+// #include "DNN/dnnvideoprocessor.h"
+//
+// QThread *videoThread = new QThread;
+// DnnVideoProcessor *processor = new DnnVideoProcessor;
+// processor->openVideo("E:\\baizhuangjia2.mp4");
+// processor->loadYoloModel("yolov3-tiny_mens.cfg",
+//                          "yolov3_tiny_mens.weights",
+//                          "test.names");
+// processor->setConfThreshold(0.4f);
+// processor->setNmsThreshold(0.5f);
+// processor->setInputSize(416, 416);
+// processor->moveToThread(videoThread);
+//
+// ── ONNX OpenCV DNN 方案（ONNXVideoProcessor + OpenCV DNN） ──
+// #include "DNN/onnxvideoprocessor.h"
+//
+// QThread *videoThread = new QThread;
+// ONNXVideoProcessor *processor = new ONNXVideoProcessor;
+// processor->openVideo("E:\\lvzhuangjia.mp4");
+// processor->loadONNXModel("best.onnx", "test.names");
+// processor->setConfThreshold(0.5f);
+// processor->setNmsThreshold(0.4f);
+// processor->moveToThread(videoThread);
+//
+// ── ORB 模板匹配方案（VideoProcessor + ORB 特征匹配） ──
+// #include "opencv/videoprocessor.h"
+//
+// QThread *videoThread = new QThread;
+// VideoProcessor *processor = new VideoProcessor;
+// processor->openVideo("E:\\tank.mp4");
+// processor->addTemplateFile("E:\\tank.png", "tank_side");
+// processor->moveToThread(videoThread);

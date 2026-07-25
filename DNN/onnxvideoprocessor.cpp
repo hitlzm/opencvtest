@@ -1,42 +1,42 @@
-#include "dnnvideoprocessor.h"
+#include "onnxvideoprocessor.h"
 #include "../opencv/cvconvert.h"
 #include <QDebug>
 #include <QThread>
 #include <opencv2/imgproc.hpp>
 
 // ========== 构造 / 析构 ==========
-DnnVideoProcessor::DnnVideoProcessor(QObject *parent)
+ONNXVideoProcessor::ONNXVideoProcessor(QObject *parent)
     : QObject(parent), m_running(false)
 {
 }
 
-DnnVideoProcessor::~DnnVideoProcessor()
+ONNXVideoProcessor::~ONNXVideoProcessor()
 {
     stop();
 }
 
 // ========== 参数 ==========
-void DnnVideoProcessor::setTargetFps(int fps)
+void ONNXVideoProcessor::setTargetFps(int fps)
 {
     if (fps > 0 && fps <= 60)
         m_targetFps = fps;
 }
 
-void DnnVideoProcessor::setConfThreshold(float t) { m_detector.setConfThreshold(t); }
-void DnnVideoProcessor::setNmsThreshold(float t)  { m_detector.setNmsThreshold(t); }
+void ONNXVideoProcessor::setConfThreshold(float t) { m_detector.setConfThreshold(t); }
+void ONNXVideoProcessor::setNmsThreshold(float t)  { m_detector.setNmsThreshold(t); }
 
-void DnnVideoProcessor::setInputSize(int width, int height)
+void ONNXVideoProcessor::setInputSize(int width, int height)
 {
     m_detector.setInputSize(width, height);
 }
 
-void DnnVideoProcessor::setBackend(int backend, int target)
+void ONNXVideoProcessor::setBackend(int backend, int target)
 {
     m_detector.setBackend(backend, target);
 }
 
 // ========== 初始化 ==========
-bool DnnVideoProcessor::openVideo(const QString &videoPath)
+bool ONNXVideoProcessor::openVideo(const QString &videoPath)
 {
     // 强制 FFmpeg 软件解码，避免 OMX/DXVA2/VAAPI 等硬件解码器兼容性问题
     // 注意：OpenCV 4.5+ 可用 set(CAP_PROP_HW_ACCELERATION, VIDEO_ACCELERATION_NONE)
@@ -47,37 +47,35 @@ bool DnnVideoProcessor::openVideo(const QString &videoPath)
         emit error("Cannot open video: " + videoPath);
         return false;
     }
-    qDebug() << "[DnnVideoProcessor] Video opened:" << videoPath;
+    qDebug() << "[ONNXVideoProcessor] Video opened:" << videoPath;
     return true;
 }
 
-bool DnnVideoProcessor::loadYoloModel(const QString &cfgPath,
-                                      const QString &weightsPath,
-                                      const QString &namesPath)
+bool ONNXVideoProcessor::loadONNXModel(const QString &onnxPath,
+                                        const QString &namesPath)
 {
-    // 1. 加载模型
-    if (!m_detector.loadModel(cfgPath.toStdString(), weightsPath.toStdString())) {
-        emit error("Failed to load YOLO model:\n  cfg: " + cfgPath +
-                    "\n  weights: " + weightsPath);
+    // 1. 加载 ONNX 模型
+    if (!m_detector.loadModel(onnxPath.toStdString())) {
+        emit error("Failed to load ONNX model: " + onnxPath);
         return false;
     }
 
     // 2. 加载类别名称
     if (!namesPath.isEmpty()) {
         if (!m_detector.loadClassNames(namesPath.toStdString())) {
-            qWarning() << "[DnnVideoProcessor] Class names file not loaded:"
+            qWarning() << "[ONNXVideoProcessor] Class names file not loaded:"
                        << namesPath << "(detection will show class index only)";
         }
     }
 
-    qDebug() << "[DnnVideoProcessor] YOLOv4 model ready,"
+    qDebug() << "[ONNXVideoProcessor] ONNX model ready,"
              << "classes:" << m_detector.classCount()
-             << "input size:" << 416 << "x" << 416;
+             << "input size:" << m_detector.inputWidth() << "x" << m_detector.inputHeight();
     return true;
 }
 
 // ========== 运行时 ==========
-void DnnVideoProcessor::start()
+void ONNXVideoProcessor::start()
 {
     m_running = true;
 
@@ -85,24 +83,24 @@ void DnnVideoProcessor::start()
         m_timer = new QTimer(this);
         m_timer->setSingleShot(true);
         QObject::connect(m_timer, &QTimer::timeout,
-                         this, &DnnVideoProcessor::processFrame);
+                         this, &ONNXVideoProcessor::processFrame);
     }
 
-    qDebug() << "[DnnVideoProcessor] Started, thread:" << QThread::currentThread();
+    qDebug() << "[ONNXVideoProcessor] Started, thread:" << QThread::currentThread();
     processFrame();
 }
 
-void DnnVideoProcessor::stop()
+void ONNXVideoProcessor::stop()
 {
     m_running = false;
     if (m_timer)
         m_timer->stop();
 }
 
-void DnnVideoProcessor::processFrame()
+void ONNXVideoProcessor::processFrame()
 {
     if (!m_running) {
-        qDebug() << "[DnnVideoProcessor] Stopped";
+        qDebug() << "[ONNXVideoProcessor] Stopped";
         emit finished();
         return;
     }
@@ -110,13 +108,13 @@ void DnnVideoProcessor::processFrame()
     // ── 1. 读取一帧 ──
     cv::Mat frame;
     if (!m_capture.read(frame)) {
-        qDebug() << "[DnnVideoProcessor] Video ended";
+        qDebug() << "[ONNXVideoProcessor] Video ended";
         emit finished();
         return;
     }
 
-    // ── 2. DNN 目标检测 ──
-    std::vector<YoloDetection> detections;
+    // ── 2. ONNX DNN 目标检测 ──
+    std::vector<ONNXDetection> detections;
     m_detector.detect(frame, detections);
 
     // ── 3. 绘制检测框 ──
